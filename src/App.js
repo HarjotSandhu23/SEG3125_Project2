@@ -20,6 +20,7 @@ import LessonBookPayment from './LessonBookPayment';
 import LessonConfirmation from './LessonConfirmation';
 import LessonEditPage from './LessonEditPage';
 import LanguageSwitcher from './LanguageSwitcher';
+import FAQ from './FAQ';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route path="/LessonBookPayment" element={<LessonBookPayment />} />
             <Route path="/LessonConfirmation" element={<LessonConfirmation />} />
             <Route path="/LessonEditPage" element={<LessonEditPage />} />
+            <Route path="/FAQ" element={<FAQ />} />
         </Routes>
       </div>
     </div>

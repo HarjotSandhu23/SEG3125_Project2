@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import backgroundimg from './images/HomeBackground.jpeg';
 import { useNavigate } from 'react-router-dom';
-import './custom.css'
+import './custom.css';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 function BackgroundImage(){
     const sectionStyle = {
@@ -48,22 +50,24 @@ function BackgroundImage(){
         navigate('/buylease');
     }
 
+    const { t } = useTranslation();
+
 
     return(
         <div className="BackgroundImage" style={sectionStyle}>
             <img src= {backgroundimg} alt="Background image" style={imgStyle} />
             <div className="content" style={contentStyle}>
-                <h2>WELCOME TO HALTON HILLS STABLE</h2>
+                <h2>{t("background_message")}</h2>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm">
-                            <button className="btn btn-primary ms-auto" onClick={lessonBook}>BOOK A LESSON</button>
+                            <button className="btn btn-primary ms-auto" onClick={lessonBook}>{t("background_book")}</button>
                         </div>
                         <div className="col-sm">
-                            <button className="btn btn-primary ms-auto" onClick={rentStable}>RENT A STABLE</button>
+                            <button className="btn btn-primary ms-auto" onClick={rentStable}>{t("background_rent")}</button>
                         </div>
                         <div className="col-sm">
-                            <button className="btn btn-primary ms-auto" onClick={viewHorses}>VIEW OUR HORSES</button>
+                            <button className="btn btn-primary ms-auto" onClick={viewHorses}>{t("background_horse")}</button>
                         </div>
                     </div>
                 </div>

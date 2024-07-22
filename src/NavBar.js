@@ -35,6 +35,9 @@ function NavBar(){
                         <li className="nav-item">
                             <Link className="nav-link" to="/contactus">{t("contact_us")}</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/FAQ">{t("faq")}</Link>
+                        </li>
                         <LanguageSwitcher />
                     </ul>
                 </div>

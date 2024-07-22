@@ -4,6 +4,17 @@
   "lessons": "COURS",
   "rent_a_stable": "LOUER UNE ÉCURIE",
   "view_horses": "VOIR LES CHEVAUX",
-  "contact_us": "CONTACTEZ-NOUS"
-
+  "contact_us": "CONTACTEZ-NOUS",
+  "faq" : "FAQ",
+  "choose_us" : "Pourquoi nous choisir",
+  "choose_us_message" : "À Halton Hills Stable, nous proposons une formation experte, des installations de pointe et des soins complets pour les chevaux et les cavaliers. Nos entraîneurs expérimentés proposent des programmes personnalisés pour tous les niveaux de compétence, tandis que notre personnel professionnel veille au bien-être de chaque cheval. Nichés dans les paysages pittoresques de Halton Hills, nous offrons une communauté accueillante et des programmes diversifiés, des cours d'équitation à l'embarquement et à la formation. Rejoignez-nous pour une expérience équestre inégalée où la sécurité, le développement des compétences et un environnement favorable sont nos principales priorités.",
+  "commitment" : "Notre engagement",
+  "commitment_message" : "À Halton Hills Stable, notre engagement est envers l’excellence dans tous les aspects des soins et de la formation équestres. Nous nous engageons à fournir un environnement sûr, favorable et enrichissant aux chevaux et aux cavaliers. Notre équipe expérimentée est passionnée par la prestation de programmes de formation personnalisés, d'installations de premier ordre et de soins complets pour assurer le bien-être et le développement de notre communauté équestre. Nous nous efforçons de favoriser un sentiment de camaraderie et de communauté, où chaque membre se sent valorisé et soutenu. Vos objectifs, votre sécurité et votre bonheur sont nos principales priorités, et nous nous engageons à vous aider, vous et votre cheval, à atteindre votre plein potentiel.",
+  "background_message" : "BIENVENUE À L'ÉCURIE DE HALTON HILLS",
+  "background_book" : "RÉSERVER UNE LEÇON",
+  "background_rent" : "LOUER UNE ÉCURIE",
+  "background_horse" : "VOIR NOS CHEVAUX",
+  "footer_about" : "À propos de nous",
+  "footer_about_message" : "Situées dans les magnifiques Halton Hills, Halton Hill Stables propose des soins aux chevaux de premier ordre, des installations ultramodernes et une formation professionnelle pour tous les cavaliers. Notre équipe dévouée crée un environnement sûr, solidaire et accueillant. Rejoignez-nous pour commencer votre aventure équestre ou perfectionner vos compétences en équitation.",
+  "footer_rights" : "Écurie Halton Hills 2024. Tous droits réservés."
 }

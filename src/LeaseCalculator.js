@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 
 function LeaseCalculator({price}){
-    const [Duration, ondurationChange] = useState('');
+    const [Duration, onDurationChange] = useState('');
     const [LeaseCost, onLeaseChange] = useState('');
     const [DownPayment, onDownPaymentChange] = useState('');
     const rate = 0.02;
@@ -16,9 +16,8 @@ function LeaseCalculator({price}){
 
     return(
     <div className="Lease Calculator">
-        <form onSubmit ={calculateLease}>
             <div className="Lease Form Group">
-                <select className="form-control mb-2" value={Duration} onChange={(e) => ondurationChange(e.target.value)}>
+                <select className="form-control mb-2" value={Duration} onChange={(e) => onDurationChange(e.target.value)}>
                     <option value="">Lease Duration (Months)</option>
                     <option value="12">12</option>
                     <option value="18">18</option>
@@ -39,10 +38,9 @@ function LeaseCalculator({price}){
                     <option value="4000">$4000</option>
                 </select>
             </div>
-        <button type="submit" className="btn btn-primary">Calculate</button>
-        </form>
+        <button onClick={calculateLease}>Calculate</button>
         <div>
-            <h3>Lease(Monthly): {LeaseCost}</h3>
+            <h3>Lease: ${LeaseCost} / Month</h3>
         </div>
     </div>
     );

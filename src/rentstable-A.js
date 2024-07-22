@@ -16,11 +16,50 @@ function RentStableA(){
     const [dob, setdob] = useState('');
     const navigate = useNavigate();
 
+    const validateEmail = (Emailaddress) => {
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(Emailaddress);
+    }
+
     const rentstablea = (e) => {
         e.preventDefault();
+        if (!Firstname){
+            window.alert("Please enter first name");
+            return;
+        }
+        if (!Lastname){
+            window.alert("Please enter last name");
+            return;
+        }
+        if (!Emailaddress || !validateEmail(Emailaddress)){
+            window.alert("Please enter Email Address");
+            return;
+        }
+        if (!phoneNumber){
+            window.alert("Please enter phone number");
+            return;
+        }
+        if (phoneNumber.length != 10){
+            window.alert("Please enter a 10-digit phone number");
+            return;
+        }
+        if (isNaN(phoneNumber)){
+            window.alert("Please enter a valid phone Number");
+            return;
+        }
+
+        if(!Breed){
+            window.alert("Please enter breed of horse");
+            return;
+        }
+        if(!dob){
+            window.alert("Please enter date of birth for horse");
+            return;
+        }
         const data = {numHorses, Duration, startDate, Firstname, Lastname, Emailaddress, phoneNumber, Breed, dob};
         console.log(data);
-        navigate("/paymentScreen");
+        navigate("/paymentScreen" , {state: data});
     }
 
     return(

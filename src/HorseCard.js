@@ -13,11 +13,11 @@ function HorseCard( {horse} ){
   };
 
     return(
-        <div className="card mb-3">
-          <img className="card-img-top" src={horse.img} alt="Card image cap" />
+        <div className="card" style={{width: '18rem', height:'350px', marginTop:'20px'}}>
+          <img className="card-img-top" style={{width: '100%', height:'200px', objectFit:'contain'}} src={horse.img} alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">{horse.name}</h5>
-            <p className="card-text">Price: {horse.price}</p>
+            <p className="card-text">Price: ${horse.price}</p>
             <button className="btn btn-primary" onClick={handleSubmit}>More Info</button>
           </div>
         </div>

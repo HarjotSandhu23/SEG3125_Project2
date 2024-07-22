@@ -1,4 +1,5 @@
 import './App.css';
+import './custom.css'
 import NavBar from './NavBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './Footer';
@@ -14,6 +15,11 @@ import RentStable from './rentstable';
 import RentStableA from './rentstable-A';
 import PaymentScreen from './paymentScreen';
 import StableConfirmation from './ConfirmationScreen';
+import LessonBook from './LessonBook';
+import LessonBookPayment from './LessonBookPayment';
+import LessonConfirmation from './LessonConfirmation';
+import LessonEditPage from './LessonEditPage';
+import LanguageSwitcher from './LanguageSwitcher';
 
 function App() {
   return (
@@ -23,7 +29,7 @@ function App() {
       <NavBar />
       <div className="content">
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/Lesson" element={<Lesson />} />
             <Route path="/buylease" element={<BuyLease />} />
             <Route path="/HorseInfo" element={<HorseInfo />} />
@@ -33,6 +39,10 @@ function App() {
             <Route path="/rentstable-A" element={<RentStableA />} />
             <Route path="/paymentScreen" element={<PaymentScreen />} />
             <Route path="/ConfirmationScreen" element={<StableConfirmation />} />
+            <Route path="/LessonBook" element={<LessonBook />} />
+            <Route path="/LessonBookPayment" element={<LessonBookPayment />} />
+            <Route path="/LessonConfirmation" element={<LessonConfirmation />} />
+            <Route path="/LessonEditPage" element={<LessonEditPage />} />
         </Routes>
       </div>
     </div>

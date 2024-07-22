@@ -33,7 +33,7 @@ function Lesson() {
 
     const filteredLessons = lessonsData.filter((lesson) => {
         return(
-        (lessonType === '' || lesson.type === lessonType) &&
+        (lessonType === '' || lesson.lessontype === lessonType) &&
         (minPrice === '' || lesson.price >= parseFloat(minPrice)) &&
         (maxPrice === '' || lesson.price <= parseFloat(maxPrice)) &&
         (difficulty === '' || lesson.difficulty === difficulty) &&
@@ -58,7 +58,9 @@ function Lesson() {
       />
       <div className="row">
         {filteredLessons.map((lesson) => (
+        <div className="col-md-4">
           <LessonCard key={lesson.id} lesson={lesson} />
+        </div>
         ))}
       </div>
     </div>

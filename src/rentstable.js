@@ -11,12 +11,25 @@ function RentStable(){
 
     const rentstable = (e) => {
         e.preventDefault();
+        if (!Duration) {
+            window.alert("Please select duration of stay");
+            return;
+        }
+        if (!startDate) {
+            window.alert("Please select start date for rental");
+            return;
+        }
+        if (!numHorses) {
+            window.alert("Please select the number of horses");
+            return;
+        }
         const data = {numHorses, Duration, startDate};
         console.log(data);
-            // Handle the form submission
-
         navigate("/rentstable-A", {state: data});
     }
+
+
+
     return(
     <div>
     <main className="container mt-5">
@@ -24,13 +37,15 @@ function RentStable(){
             <div className ="mb-4">
                 <label for="numberofHorses" className="form-label">Number of Horses:</label>
                 <select className="form-select" id="numberofHorses" value={numHorses} onChange={(e) => setnumHorses(e.target.value)}>
+                    <option value="" disabled>Select Number of horses</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
                 <label for="durationofrent" className="form-label">Duration:</label>
-                <select className="form-select" id="numberofHorses" value={Duration} onChange={(e) => setDuration(e.target.value)}>
+                <select className="form-select" id="numberofDays" value={Duration} onChange={(e) => setDuration(e.target.value)}>
+                    <option value="" disabled>Select duration length</option>
                     <option value="1 Day">1 Day</option>
                     <option value="2 Day">2 Day</option>
                     <option value="3 Day">3 Day</option>

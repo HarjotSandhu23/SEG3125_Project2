@@ -39,7 +39,7 @@ function BuyLease(){
 
     const filteredHorses = horsedata.filter((horse) => {
         return(
-        (breedType === '' || horse.type === breedType) &&
+        (breedType === '' || horse.breed === breedType) &&
         (minPrice === '' || horse.price >= parseFloat(minPrice)) &&
         (maxPrice === '' || horse.price <= parseFloat(maxPrice)) &&
         (minAge === '' || horse.age >= parseFloat(minAge)) &&
@@ -65,7 +65,9 @@ function BuyLease(){
         />
         <div className="row">
             {filteredHorses.map((horse) => (
-            <HorseCard key={horse.id} horse={horse} />
+            <div className="col-md-4">
+                <HorseCard key={horse.id} horse={horse} />
+            </div>
          ))}
         </div>
     </div>

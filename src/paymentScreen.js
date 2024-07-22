@@ -16,9 +16,20 @@ function PaymentScreen(){
 
     const payment = (e) => {
         e.preventDefault();
+        if (!PaymentName) {
+             window.alert("Please enter payment card name");
+             return;
+        }
+        if (!CardNumber || CardNumber.length !=16 || isNaN(CardNumber)){
+            window.alert("Please enter a valid card number");
+        }
+        if (!CardCVC || CardCVC.length != 3 || isNaN(CardCVC)){
+            window.alert("Please enter a valid cvc number");
+            return;
+        }
         const data = {numHorses, Duration, startDate, Firstname, Lastname, Emailaddress, phoneNumber, Breed, dob, PaymentName, CardNumber, CardCVC};
         console.log(data);
-        navigate("/ConfirmationScreen");
+        navigate("/ConfirmationScreen" , {state: data});
     }
 
     return(
